@@ -35,4 +35,6 @@ SampleApp::Application.configure do
   config.active_support.deprecation = :stderr
 
   ActiveModel::SecurePassword.min_cost = true
+  # local host is the host for development
+
 end
