@@ -8,5 +8,9 @@
 # You can use `rake secret` to generate a secure secret key.
 
 # Make sure your secret_key_base is kept private
-# if you're sharing your code publicly.
-SampleApp::Application.config.secret_key_base = ENV['SECRET_TOKEN']
+# if you're sharing your code publicly.MyApp::Application.config.secret_token = if Rails.env.development? or Rails.env.test?
+SampleApp::Application.config.secret_token = if Rails.env.development? or Rails.env.test?
+  ('x' * 30) # meets minimum requirement of 30 chars long
+else
+  ENV['SECRET_TOKEN']
+end
