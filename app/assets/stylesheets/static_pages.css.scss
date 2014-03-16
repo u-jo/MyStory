@@ -1,3 +1,54 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$pastelBlue: #93E2D5;
+$pastelGreen: #89E894;
+$darkGray: #696969;
+$lightGray: #cccccc;
+.splash_page {
+	position: relative;
+	top: -10px;
+}
+
+div.welcome h1, 
+div.welcome h2, 
+.features h1, 
+.features h2,
+.introduction header,
+.introduction h2 {
+	font-family: 'The Girl Next Door', cursive;
+}
+
+.introduction {
+	background-color: $lightGray;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.introduction h2 {
+	color: black;
+}
+.introduction h2,
+.features h2 {
+	font-size: 30px;
+}
+
+.features.left_feature, .features.right_feature, .features.center_feature {
+	padding: 20px;
+}
+.features header {
+	padding: 10px;
+	background-color: $pastelGreen;
+}
+
+.features h2 {
+	background-color: $pastelBlue;
+	padding: 20px;
+	color: $darkGray;
+}
+
+div.row {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+

@@ -2,7 +2,7 @@
 
 /* mixins, variables, etc. */
 $grayMediumLight: #eaeaea;
-
+$pastelGray: #d3d3d3;
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -215,3 +215,55 @@ aside {
     margin-bottom: 5px;
   }
 }
+
+/* navbar css*/
+.navbar-simple .brand {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.navbar-simple .navbar-inner {
+  background: #fff;
+  filter: none !important;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0 2px 15px rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  font-family: 'Carrois Gothic SC', sans-serif;
+}
+.navbar-simple .navbar-inner .nav {
+  float: right;
+}
+.navbar-simple .navbar-inner .nav li a {
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: #777;
+  font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: 600;
+}
+.navbar-simple .navbar-inner .nav li a:hover {
+  background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  color: black;
+  background-color: $pastelGray;
+  text-shadow: none;
+}   
+
+
+a.brand {
+  font-family: 'Fascinate Inline', sans-serif;
+}
+
+a.brand:hover {
+  background-color: $pastelGray;
+  color: black;
+}
+.navbar-simple .navbar-inner .nav li.active a {
+  color: #bf3604;
+}
+

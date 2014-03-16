@@ -1,7 +1,9 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
-          <%= link_to "My Story", '#', id: "logo" %>
+<header class="navbar navbar-simple navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"></button> <a class="brand" href="#">MyStory</a>
+          <div class="nav-collapse collapse">
+           <%= link_to "My Story", root_path, id: "logo" %>
           <nav>
             <ul class="nav pull-right">
               <li><%= link_to "Home",    root_path %></li>
@@ -22,10 +24,13 @@
                   </ul>
                 </li>
               <% else %>
+                <li><%= link_to "Features", "#" %></li>
                 <li><%= link_to "Sign in", signin_path %></li>
               <% end %>
             </ul>
           </nav>
-        </div>
-      </div>
-    </header>
+        </div><!--/.nav-collapse -->
+       </div>
+  </div>
+</header>
+
