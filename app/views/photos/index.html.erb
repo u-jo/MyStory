@@ -1,0 +1,13 @@
+<div class="container">
+	<% provide(:title, 'All Memories') %>
+	<h1>All Photos</h1>
+
+
+
+	<ul class="photos">
+		<% @photos.each do |photo| %>
+		<li><%=photo.description %></li>
+		<% end %>
+	</ul>
+</div>
+
