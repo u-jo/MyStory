@@ -14,4 +14,12 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
+//= require jquery-readyselector
+//= require jquery-1.4.4.min
+//= require jquery.booklet.1.1.0
+//= require jquery.booklet.1.1.0.min
+//= require jquery.easing.1.3
+//= require cufon/cufon-yui
+//= require cufon/ChunkFive_400.font
+//= require cufon/Note_this_400.font
 //= require_tree .
