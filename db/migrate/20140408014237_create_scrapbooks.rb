@@ -5,6 +5,5 @@ class CreateScrapbooks < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :scrapbooks, :user_id
   end
 end
