@@ -21,9 +21,15 @@ class UsersController < ApplicationController
   	
   	if @user.save
   		#handle successful
-      sign_in @user
-      flash[:success] = "Start writing your story!"
-      redirect_to @user
+      @scrapbook = create_user_scrapbook
+
+      if @scrapbook.save
+        sign_in @user
+        flash[:success] = "Start writing your story!"
+        redirect_to @user
+      else 
+        flash.now[:error] = "Unable to create you scrapbook!"
+      end 
   	else
   		render 'new'
   	end
@@ -75,5 +81,9 @@ class UsersController < ApplicationController
 
     def admin_user
       redirect_to(root_url) unless current_user.admin?
+    end
+
+    def create_user_scrapbook
+      @scrapbook = @user.build_scrapbook
     end
 end

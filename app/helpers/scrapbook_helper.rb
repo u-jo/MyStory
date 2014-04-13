@@ -1,5 +1,5 @@
 module ScrapbookHelper
-	def store_location
- 		session[:return_to] = request.url if request.get?
- 	end
+	def current_scrapbook 
+		return current_user.scrapbook
+	end
 end

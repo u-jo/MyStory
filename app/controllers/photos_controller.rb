@@ -38,7 +38,6 @@ class PhotosController < ApplicationController
 
   private 
   	def photo_params
-      puts "hello"
   		params.require(:photo).permit(:description, :image => ActionDispatch::Http::UploadedFile)
   	end
 end
