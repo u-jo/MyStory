@@ -46,8 +46,6 @@ ActiveRecord::Schema.define(version: 20140413201937) do
     t.datetime "updated_at"
   end
 
-  add_index "scrapbooks", ["user_id"], name: "index_scrapbooks_on_user_id"
-
   create_table "scribbles", force: true do |t|
     t.integer  "user_id"
     t.string   "scribble_text"
