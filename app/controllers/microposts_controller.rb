@@ -1,10 +1,10 @@
-class ScribblesController < ApplicationController
+class MicropostsController < ApplicationController
   before_action :signed_in_user, only: [:create, :destroy]
   before_action :correct_user, only: :destroy
 
   def create
-    @scribble = current_user.scribbles.build(scribble_params)
-    if @scribble.save
+    @micropost = current_user.microposts.build(micropost_params)
+    if @micropost.save
       flash[:success] = "Scribble recorded!"
       redirect_to root_url
     else
@@ -14,18 +14,18 @@ class ScribblesController < ApplicationController
   end
 
   def destroy
-    @scribble.destroy
+    @micropost.destroy
     redirect_to root_url
   end
 
   private
 
-    def scribble_params
-      params.require(:scribble).permit(:content)
+    def micropost_params
+      params.require(:micropost).permit(:content)
     end
 
     def correct_user
-      @scribble = current_user.scribbles.find_by(id: params[:id])
-      redirect_to root_url if @scribble.nil?
+      @micropost = current_user.microposts.find_by(id: params[:id])
+      redirect_to root_url if @micropost.nil?
     end
 end

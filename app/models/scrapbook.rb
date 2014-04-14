@@ -3,8 +3,6 @@ class Scrapbook < ActiveRecord::Base
 	has_many :scribbles
 	belongs_to :user
 
-	validates :user_id, presence: true
-	
 	def create_sb_page
 		sb_page = sb_pages.build
 		sb_page.save
