@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 	has_many :photos, dependent: :destroy
+	has_many :microposts, dependent: :destroy
 	has_one :scrapbook, dependent: :destroy
 	has_many :sb_pages, through: :scrapbook, dependent: :destroy
 	has_many :scribbles, through: :scrapbook, dependent: :destroy
@@ -19,7 +20,10 @@ class User < ActiveRecord::Base
 		Digest::SHA1.hexdigest(token.to_s)
 	end
 
-
+	def feed
+    # This is preliminary. See "Following users" for the full implementation.
+    	Micropost.where("user_id = ?", id)
+  	end
 
 	private 
 
