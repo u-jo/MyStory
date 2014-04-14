@@ -1,10 +1,20 @@
 <% if signed_in? %>
+<% provide(:title, @user.name) %>
 <div class="container">
   <div class="row">
-    <div class="span8">
-      <h3>My Scribbles</h3>
-      <%= render 'shared/feed' %>
-    </div>
+      <% if @user.scribbles.any? %>
+        <h1>Recent Scribbles</h1>
+        <% @recent_scribbles.each do |scribble| %>
+          <% if scribble[:scribble_text] != "" %>
+              
+          <div class="box shadow-effect">
+            <h3> <%=scribble[:scribble_text] %></h3>
+
+          </div>
+          <% end %>
+      <% end %>
+          
+      <% end %>
   </div>
 </div>
 

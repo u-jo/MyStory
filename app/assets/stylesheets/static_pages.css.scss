@@ -5,6 +5,7 @@ $pastelBlue: #93E2D5;
 $pastelGreen: #89E894;
 $darkGray: #696969;
 $lightGray: #cccccc;
+$pastel-grey: #CFCFC4;
 .splash_page {
 	position: relative;
 	top: -10px;
@@ -49,6 +50,30 @@ div.welcome h2,
 div.row {
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.static_pages.home {
+	.box h3 {
+		text-align:center;
+		position:relative;
+	}
+	.box {
+		width:70%;
+		background:$pastel-grey;
+		padding: 10px;
+		margin:10px auto;
+		transition: width 0.5s;
+	}
+
+	.shadow-effect {
+		-webkit-box-shadow: 0px 2px 1px 0 #777;
+	   	-moz-box-shadow: 0px 2px 1px 0 #777;
+	    box-shadow: 0px 2px 1px 0 #777;
+	}
+	.box:hover {
+		-webkit-box-shadow: 0 0px 0 -6px #777;
+		width: 80%;
+	}
 }
 
 

@@ -9,7 +9,8 @@ class Scrapbook < ActiveRecord::Base
 		return sb_page
 	end
 
+
 	def create_scribble(scribble_text)
-		scribbles.build(scribble_text: scribble_text, user_id: :user_id)
+		scribbles.build(content: scribble_text, user_id: :user_id)
 	end
 end
