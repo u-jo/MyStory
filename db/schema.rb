@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140412150250) do
+ActiveRecord::Schema.define(version: 20140413201937) do
 
   create_table "microposts", force: true do |t|
     t.string   "content"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20140412150250) do
   add_index "photos", ["user_id", "created_at"], name: "index_photos_on_user_id_and_created_at"
 
   create_table "sb_pages", force: true do |t|
-    t.text     "scribbles"
     t.date     "pagedate"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -48,6 +47,14 @@ ActiveRecord::Schema.define(version: 20140412150250) do
   end
 
   add_index "scrapbooks", ["user_id"], name: "index_scrapbooks_on_user_id"
+
+  create_table "scribbles", force: true do |t|
+    t.integer  "user_id"
+    t.string   "scribble_text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "scrapbook_id"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"

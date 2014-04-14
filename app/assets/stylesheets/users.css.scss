@@ -1,3 +1,28 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$pastel-grey: #CFCFC4;
+.users.show {
+	.box h3 {
+		text-align:center;
+		position:relative;
+	}
+	.box {
+		width:70%;
+		background:$pastel-grey;
+		padding: 10px;
+		margin:10px auto;
+		transition: width 0.5s;
+	}
+
+	.shadow-effect {
+		-webkit-box-shadow: 0px 2px 1px 0 #777;
+	   	-moz-box-shadow: 0px 2px 1px 0 #777;
+	    box-shadow: 0px 2px 1px 0 #777;
+	}
+	.box:hover {
+		-webkit-box-shadow: 0 0px 0 -6px #777;
+		width: 80%;
+	}
+}

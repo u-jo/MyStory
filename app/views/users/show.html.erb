@@ -1,22 +1,15 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-	<aside class="span4">
-		<section>
-			<h1>
-				<%= gravatar_for @user %>
-				<%= @user.name %>
-			</h1>
-		</section>
-	</aside>
-
-	<div class="span8">
-    <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
-      <ol class="microposts">
-        <%= render @microposts %>
-      </ol>
-      <%= will_paginate @microposts %>
-    <% end %>
-  </div>
-
+<div class="container">
+	<div class="row">
+	    <% if @user.scribbles.any? %>
+	    	<h1>Recent Scribbles</h1>
+		    <% @recent_scribbles.each do |scribble| %>
+		    	<div class="box shadow-effect">
+		    		<h3> <%=scribble[:scribble_text] %></h3>
+		    	</div>
+		    	
+			<% end %>
+		      
+	    <% end %>
+	</div>
 </div>

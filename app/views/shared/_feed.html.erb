@@ -1,6 +1,6 @@
-<% if @feed_items.any? %>
-  <ol class="microposts">
-    <%= render partial: 'shared/feed_item', collection: @feed_items %>
-  </ol>
-  <%= will_paginate @feed_items %>
+<% if @recent_scribbles.any? %>
+	<h1>Recent Scribbles</h1>
+	<% @recent_scribbles.each do |scribble| %>
+		<li><%=scribble[:scribble_text] %>
+	<% end %>
 <% end %>

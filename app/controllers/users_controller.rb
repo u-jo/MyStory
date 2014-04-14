@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   def show 
   	@user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
+    @recent_scribbles = @user.scribbles.last(5).reverse
   end
 
   def create

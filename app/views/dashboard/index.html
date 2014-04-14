@@ -1,0 +1,8 @@
+<% provide(:title, 'Dashboard') %>
+<div class="row">
+
+	<% @recent_scribbles.each do |scribble| %>
+		<li><%= scribble %>
+	<% end %>
+</div>
+
