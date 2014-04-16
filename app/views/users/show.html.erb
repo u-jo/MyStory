@@ -1,15 +1,39 @@
 <% provide(:title, @user.name) %>
+
 <div class="container">
 	<div class="row">
-	    <% if @user.scribbles.any? %>
-	    	<h1>Recent Scribbles</h1>
-		    <% @recent_scribbles.each do |scribble| %>
-		    	<div class="box shadow-effect">
-		    		<h3> <%=scribble[:scribble_text] %></h3>
-		    	</div>
-		    	
-			<% end %>
-		      
-	    <% end %>
+		<div class="span1">
+			<%= gravatar_for @user %>
+		</div>
+		
+		<div class="span7">
+			<div class="row">
+				<h2>
+					VJO
+				</h2>
+			</div>
+			<div class="row">
+				Pokemon Trainer, Pebble Town 
+			</div>
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="span5">
+		    <% if @user.scribbles.any? %>
+		    	<h1>Recent Scribbles</h1>
+			    <% @recent_scribbles.each do |scribble| %>
+			    	<div class="box shadow-effect">
+			    		<p> <%=scribble[:scribble_text] %></p>
+			    	</div>
+			    	
+				<% end %>
+			      
+		    <% end %>
+		</div>
+	</div>
+
+	<div class="row">
+		<h1>Dashboard</h1>
 	</div>
 </div>

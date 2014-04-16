@@ -3,17 +3,31 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 $pastel-grey: #CFCFC4;
+$pastel-green: #77dd77;
+body {
+	font-family: 'Patrick Hand SC', cursive;
+}
 .users.show {
-	.box h3 {
-		text-align:center;
+
+	h1 {
+		font-size: 30px;
+	}
+
+	h2 {
+		text-align: left;
+	}
+	.box p {
 		position:relative;
+		font: "Patrick Hand SC";
+		font-size: 20px;
 	}
 	.box {
 		width:70%;
-		background:$pastel-grey;
+		background-color:$pastel-grey;
 		padding: 10px;
 		margin:10px auto;
-		transition: width 0.5s;
+		transition: width 0.5s, background-color 0.5s ease;
+		text-align: center;
 	}
 
 	.shadow-effect {
@@ -24,5 +38,10 @@ $pastel-grey: #CFCFC4;
 	.box:hover {
 		-webkit-box-shadow: 0 0px 0 -6px #777;
 		width: 80%;
+		background-color: $pastel-green;
 	}
+}
+
+.users.index {
+
 }
