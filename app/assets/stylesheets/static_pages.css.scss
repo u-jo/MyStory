@@ -14,9 +14,21 @@ div.welcome h1,
 div.welcome h2, 
 .features h1, 
 .features h2,
-.introduction header,
-.introduction h2 {
-	font-family: 'The Girl Next Door', cursive;
+.introduction header
+{
+	font-family: 'Oswald', sans-serif;
+	
+}
+
+.btn.btn-primary
+{
+	font-family: 'Lato', sans-serif;
+}
+
+div.welcome h2,
+.introduction h2
+{
+	font-family: 'Lato', sans-serif;
 }
 
 .introduction {

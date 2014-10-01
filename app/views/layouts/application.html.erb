@@ -5,9 +5,8 @@
     <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag "application", media: "all",
                                            "data-turbolinks-track" => true %>
-    <%= stylesheet_link_tag "application", "http://fonts.googleapis.com/css?family=Fascinate+Inline" %>
-    <%= stylesheet_link_tag "application", "http://fonts.googleapis.com/css?family=Carrois+Gothic+SC" %>
-    <%= stylesheet_link_tag "application", "http://fonts.googleapis.com/css?family=The+Girl+Next+Door" %>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
@@ -23,7 +22,6 @@
       </div>
       <%= yield %>
       <%= render 'layouts/footer' %>
-      <%= debug(params) if Rails.env.development? %>
 
   </body>
 </html>
